@@ -2,12 +2,12 @@ from mesa import Agent, Model
 from mesa.time import RandomActivation
 from mesa.space import MultiGrid
 from mesa.datacollection import DataCollector
-from mesa.batchrunner import BatchRunner
+from mesa.batchrunner import batch_run
 
 
 def compute_gini(model):
     # Do math here!
-    agent_wealths = [agent.wealth for agent in model.schedule.agents]
+    agent_wealths = [agent.wealth for agent in model.schecdule.agents]
     x = sorted(agent_wealths)
     N = model.num_agents
     B = sum(xi * (N - i) for i, xi in enumerate(x)) / (N * sum(x))

@@ -31,7 +31,7 @@ grid = CanvasGrid(
   800)
 
 chart = ChartModule([{
-  'Label': 'Gini',
+  'Label': 'Gini Coefficient',
   'Color': 'Black'}],
   data_collector_name='datacollector')
 
